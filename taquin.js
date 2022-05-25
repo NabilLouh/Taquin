@@ -1,5 +1,6 @@
 $('.victoire').hide()
 
+
 var casevidetop = 300
 var casevideleft = 300
 var counthit = 0
@@ -26,74 +27,93 @@ c16good = false
 
 var max = emplacement.length - 1
 var taille = emplacement.length - 1
+var chrono
 
 
 position = Math.floor(Math.random() * max)
 index = 0
 
-
-
-while (index <= max ) {
+$('#debut').click(function() {
+    clearInterval(chrono)
+    var sec = 0
+    var min = 0
+    chrono = setInterval(function() {
+        sec = sec + 1
+        if (sec == 60) {
+            min = min + 1
+            sec = 0
+        }
+        $('.chrono').text('Temps : ' + min + ":" + sec)
     
-    taille = emplacement.length - 1
-    position = Math.floor(Math.random() * taille)
-   
+    }, 100)
 
 
 
-    if (emplacement[position] == 1) {
-        $('.case').eq(index).css("left", 0)
-        $('.case').eq(index).css("top", 0)
-    } else if (emplacement[position] == 2) {
-        $('.case').eq(index).css("left", 100)
-        $('.case').eq(index).css("top", 0)
-    } else if (emplacement[position] == 3) {
-        $('.case').eq(index).css("left", 200)
-        $('.case').eq(index).css("top", 0)
-    } else if (emplacement[position] == 4) {
-        $('.case').eq(index).css("left", 300)
-        $('.case').eq(index).css("top", 0)
-    } if (emplacement[position] == 5) {
-        $('.case').eq(index).css("left", 0)
-        $('.case').eq(index).css("top", 100)
-    } else if (emplacement[position] == 6) {
-        $('.case').eq(index).css("left", 100)
-        $('.case').eq(index).css("top", 100)
-    } else if (emplacement[position] == 7) {
-        $('.case').eq(index).css("left", 200)
-        $('.case').eq(index).css("top", 100)
-    } else if (emplacement[position] == 8) {
-        $('.case').eq(index).css("left", 300)
-        $('.case').eq(index).css("top", 100)
-    } else if (emplacement[position] == 9) {
-        $('.case').eq(index).css("left", 0)
-        $('.case').eq(index).css("top", 200)
-    } else if (emplacement[position] == 10) {
-        $('.case').eq(index).css("left", 100)
-        $('.case').eq(index).css("top", 200)
-    } else if (emplacement[position] == 11) {
-        $('.case').eq(index).css("left", 200)
-        $('.case').eq(index).css("top", 200)
-    } else if (emplacement[position] == 12) {
-        $('.case').eq(index).css("left", 300)
-        $('.case').eq(index).css("top", 200)
-    } else if (emplacement[position] == 13) {
-        $('.case').eq(index).css("left", 0)
-        $('.case').eq(index).css("top", 300)
-    } else if (emplacement[position] == 14) {
-        $('.case').eq(index).css("left", 100)
-        $('.case').eq(index).css("top", 300)
-    } else if (emplacement[position] == 15) {
-        $('.case').eq(index).css("left", 200)
-        $('.case').eq(index).css("top", 300)
-    } else if (emplacement[position] == 16) {
-        $('.case').eq(index).css("left", 300)
-        $('.case').eq(index).css("top", 300)
-    } 
 
-    emplacement.splice(position, 1);
-    index = index + 1
-}
+    while (index <= max ) {
+    
+        taille = emplacement.length - 1
+        position = Math.floor(Math.random() * taille)
+       
+    
+    
+    
+        if (emplacement[position] == 1) {
+            $('.case').eq(index).css("left", 0)
+            $('.case').eq(index).css("top", 0)
+        } else if (emplacement[position] == 2) {
+            $('.case').eq(index).css("left", 100)
+            $('.case').eq(index).css("top", 0)
+        } else if (emplacement[position] == 3) {
+            $('.case').eq(index).css("left", 200)
+            $('.case').eq(index).css("top", 0)
+        } else if (emplacement[position] == 4) {
+            $('.case').eq(index).css("left", 300)
+            $('.case').eq(index).css("top", 0)
+        } if (emplacement[position] == 5) {
+            $('.case').eq(index).css("left", 0)
+            $('.case').eq(index).css("top", 100)
+        } else if (emplacement[position] == 6) {
+            $('.case').eq(index).css("left", 100)
+            $('.case').eq(index).css("top", 100)
+        } else if (emplacement[position] == 7) {
+            $('.case').eq(index).css("left", 200)
+            $('.case').eq(index).css("top", 100)
+        } else if (emplacement[position] == 8) {
+            $('.case').eq(index).css("left", 300)
+            $('.case').eq(index).css("top", 100)
+        } else if (emplacement[position] == 9) {
+            $('.case').eq(index).css("left", 0)
+            $('.case').eq(index).css("top", 200)
+        } else if (emplacement[position] == 10) {
+            $('.case').eq(index).css("left", 100)
+            $('.case').eq(index).css("top", 200)
+        } else if (emplacement[position] == 11) {
+            $('.case').eq(index).css("left", 200)
+            $('.case').eq(index).css("top", 200)
+        } else if (emplacement[position] == 12) {
+            $('.case').eq(index).css("left", 300)
+            $('.case').eq(index).css("top", 200)
+        } else if (emplacement[position] == 13) {
+            $('.case').eq(index).css("left", 0)
+            $('.case').eq(index).css("top", 300)
+        } else if (emplacement[position] == 14) {
+            $('.case').eq(index).css("left", 100)
+            $('.case').eq(index).css("top", 300)
+        } else if (emplacement[position] == 15) {
+            $('.case').eq(index).css("left", 200)
+            $('.case').eq(index).css("top", 300)
+        } else if (emplacement[position] == 16) {
+            $('.case').eq(index).css("left", 300)
+            $('.case').eq(index).css("top", 300)
+        } 
+    
+        emplacement.splice(position, 1);
+        index = index + 1
+    }
+    
+})
+
 
 
 
@@ -218,9 +238,10 @@ $('.case').click(function() {
 
 
     if (c1good == true) {
-        clearInterval(chrono)
+        
         $('#tableau').hide()
         $('.victoire').show()
+        clearInterval(chrono)
     }
 
 
@@ -228,16 +249,5 @@ $('.case').click(function() {
    
 })
 
-var sec = 0
-var min = 0
-var chrono = setInterval(function() {
-    sec = sec + 1
-    if (sec == 60) {
-        min = min + 1
-        sec = 0
-    }
-    $('.chrono').text('Temps : ' + min + ":" + sec)
-  
-}, 100)
 
 
