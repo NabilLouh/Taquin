@@ -1,0 +1,100 @@
+.case {
+    color: white;
+    background-color: black;
+    border: 1px solid red;
+    height: 100px;
+    width: 100px;
+    position:absolute;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+
+
+#tableau {
+    height: 400px;
+    width: 400px;
+    display:flex;
+    flex-wrap:wrap;
+    background-color: lightgrey;
+    border: 1px solid red;
+    position:relative;
+}
+
+
+#case1 {
+    left:0px;
+    top:0px
+}
+
+#case2 {
+    left:100px;
+    top:0px
+}
+
+#case3 {
+    left:200px;
+    top:0px
+}
+
+#case4 {
+    left:300px;
+    top:0px
+}
+
+
+#case5 {
+    left:0px;
+    top:100px
+}
+
+#case6 {
+    left:100px;
+    top:100px
+}
+
+#case7 {
+    left:200px;
+    top:100px
+}
+
+#case8 {
+    left:300px;
+    top:100px
+}
+
+#case9 {
+    left:0px;
+    top:200px
+}
+
+#case10 {
+    left:100px;
+    top:200px
+}
+
+#case11 {
+    left:200px;
+    top:200px
+}
+
+#case12 {
+    left:300px;
+    top:200px
+}
+
+#case13 {
+    left:0px;
+    top:300px
+}
+
+#case14 {
+    left:100px;
+    top:300px
+}
+
+#case15 {
+    left:200px;
+    top:300px
+}
