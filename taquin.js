@@ -27,13 +27,28 @@ c16good = false
 
 var max = emplacement.length - 1
 var taille = emplacement.length - 1
-var chrono
-
+var chrono;
+var lancer = false;
 
 position = Math.floor(Math.random() * max)
 index = 0
+casevidetop = 300
+casevideleft = 300
+counthit = 0
 
 $('#debut').click(function() {
+    emplacement = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+    index = 0
+    lancer = true
+    casevidetop = 300
+    casevideleft = 300
+    counthit = 0
+    lancer = true;
+    $('.count').text("Nombre de coup : " + counthit);
+    $('#tableau').show()
+    $('.victoire').hide()
+
+
     clearInterval(chrono)
     var sec = 0
     var min = 0
@@ -119,7 +134,8 @@ $('#debut').click(function() {
 
 
 $('.case').click(function() {
-    counthit = counthit + 1
+    if (lancer == true) {
+        counthit = counthit + 1
     $('.count').text("Nombre de coup : " + counthit);
 
    
@@ -155,7 +171,7 @@ $('.case').click(function() {
         c2good = true
     } else {
         c2good = false
-    }
+    } 
     if ($('#case3').position().top == 0 && $('#case3').position().left == 200) {
         c3good = true
     } else {
@@ -227,23 +243,27 @@ $('.case').click(function() {
         c16good = false
     }
 
-/*
-    if (c1good == true && c12good == true && c3good == true && c4good == true && c5good == true && c6good == true && 
+
+    if (c1good == true && c2good == true && c3good == true && c4good == true && c5good == true && c6good == true && 
         c7good == true && c8good == true && c9good == true && c10good == true && c11good == true && c12good == true && 
         c13good == true && c14good == true && c15good == true && c16good == true) {
         clearInterval(chrono)
         $('#tableau').hide()
         $('.victoire').show()
-    } */
+        lancer = false
+    } 
+    }
+    
 
-
+/*
     if (c1good == true) {
         
         $('#tableau').hide()
         $('.victoire').show()
         clearInterval(chrono)
+        lancer = false
     }
-
+*/
 
     
    
